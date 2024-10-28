@@ -1,4 +1,3 @@
-/* Estilos gerais */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -7,312 +6,253 @@ body {
 }
 
 header {
-    background: #333;
-    color: white;
-    padding: 10px; /* Diminui a altura do cabeçalho */
-}
-
-nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem; /* Aumenta o padding para melhor espaçamento */
     display: flex;
-    justify-content: space-between; /* Espaço entre logo e menu */
-    align-items: center; /* Alinha verticalmente */
-}
-
-.logo {
-    margin-bottom: 0; /* Remove o espaço abaixo do logo */
-    margin-top: -5px; /* Ajusta a margem superior para alinhar melhor */
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo h1 {
-    color: white; /* Cor do texto */
-    font-family: 'Montserrat', sans-serif; /* Fonte do título */
-    font-size: 24px; /* Tamanho da fonte */
-    margin: 0; /* Remove margens */
+    margin: 0;
+    font-size: 1.8rem; /* Tamanho da fonte do título */
 }
 
 .menu {
     display: flex;
-    flex-direction: column; /* Empilha os links */
-    align-items: flex-end; /* Alinha os itens à direita */
+    align-items: center;
 }
 
 .links {
-    margin-bottom: 5px; /* Espaçamento entre o link e os ícones sociais */
+    margin-right: 20px; /* Espaçamento entre os links e os ícones sociais */
 }
 
-.menu a {
-    color: white; /* Cor dos links do menu */
-    text-decoration: none; /* Remove o sublinhado */
-    margin: 0; /* Remove margens */
-    text-align: right; /* Alinha o texto à direita */
-    font-size: 18px; /* Tamanho do texto aumentado para 18px */
+.links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px; /* Espaçamento entre os links */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: color 0.3s; /* Transição suave para hover */
+}
+
+.links a:hover {
+    color: #ffcc00; /* Cor ao passar o mouse */
 }
 
 .social-icons {
     display: flex;
-    margin-top: 5px; /* Espaçamento entre o link e os ícones */
+    align-items: center;
 }
 
 .social-icons a {
-    color: white; /* Cor dos ícones sociais */
-    font-size: 20px; /* Tamanho dos ícones */
-    margin: 0 10px; /* Aumenta o espaçamento entre os ícones */
+    color: #fff;
+    margin-left: 15px;
+    font-size: 1.5rem; /* Aumenta o tamanho dos ícones sociais */
+    transition: color 0.3s; /* Transição suave para hover */
+}
+
+.social-icons a:hover {
+    color: #ffcc00; /* Cor ao passar o mouse */
 }
 
 .highlight {
     position: relative;
-    height: 70vh; /* Aumenta a altura do vídeo para 70% da tela */
     overflow: hidden;
-    margin: 0; /* Remove margens que podem estar causando espaço extra */
-}
-
-.video-container {
-    height: 100%; /* Garante que o contêiner ocupe 100% da altura do pai */
 }
 
 .video-container video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block; /* Remove espaço em branco abaixo do vídeo */
+    height: auto;
 }
 
-.banner {
-    padding: 20px 0; /* Adiciona espaçamento ao banner */
-    text-align: center; /* Centraliza o banner */
+.banner img {
+    width: 100%;
+    height: auto;
 }
 
 .carrossel {
-    padding: 20px;
     text-align: center;
+    padding: 2rem 0;
 }
 
 .carrossel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carrossel-container img {
-    width: 100%; /* Ajusta a imagem para ocupar 100% da largura do contêiner */
-    height: auto;
-    border-radius: 8px; /* Adiciona bordas arredondadas */
-}
-
-.whatsapp-section {
-    text-align: center; /* Centraliza o texto da seção do WhatsApp */
-    padding: 20px;
-}
-
-.whatsapp-section a {
-    color: #28a745; /* Cor do link do WhatsApp */
-    font-size: 18px; /* Tamanho do texto */
-    text-decoration: none; /* Remove o sublinhado */
-}
-
-#produtos {
-    padding: 20px;
-    text-align: center;
+    margin: 0 auto;
 }
 
 .produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem 0;
+}
+
+.produto {
+    width: 30%;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+}
+
+#institucional {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.institucional-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.institucional-imagem img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.institucional-texto {
+    flex: 1;
+}
+
+#selos {
+    padding: 2rem;
+    text-align: center;
+}
+
+.selos-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.produto {
-    margin: 20px; /* Aumenta a margem entre os produtos */
+.selo {
+    margin: 15px;
+    width: 80px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    display: flex;
-    flex-direction: column; /* Coloca o texto abaixo da imagem */
-    align-items: center; /* Centraliza o texto */
-    width: 250px; /* Aumenta a largura dos produtos para 250px */
+    padding: 1rem;
 }
 
-.produto a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: black; /* Define a cor do texto como preto */
+footer .footer-info {
+    margin: 1rem 0;
 }
 
-.produto img {
-    width: 100%; /* Ajusta a imagem para ocupar 100% da largura do contêiner */
-    height: auto;
-}
-
-#institucional {
-    padding: 20px;
-    text-align: center; /* Centraliza o texto desta seção */
+.whatsapp-section {
+    text-align: center;
+    padding: 1rem;
 }
 
 #contato {
-    padding: 20px;
+    padding: 2rem;
     text-align: center;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    max-width: 600px;
-    margin: auto;
-}
-
-#contato h2 {
-    font-family: 'Montserrat', sans-serif;
 }
 
 #contato form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-#contato input, #contato textarea {
-    margin-bottom: 10px;
+#contato input, 
+#contato textarea {
+    margin: 10px 0;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 80%;
+    max-width: 400px;
 }
 
 #contato button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
 }
 
-#selos {
-    padding: 20px;
-    text-align: center; /* Centraliza o texto da seção de selos */
+#contato button:hover {
+    background-color: #555;
 }
 
-.selos-container {
-    display: flex;
-    justify-content: center; /* Centraliza os selos */
-    flex-wrap: wrap; /* Permite que os selos quebrem para a próxima linha, se necessário */
-}
-
-.selo {
-    margin: 15px; /* Margem entre os selos */
-    text-align: center;
-    width: 80px; /* Largura fixa dos selos */
-}
-
-.selo p {
-    font-size: 14px; /* Tamanho da fonte para o texto abaixo do selo */
-    margin: 5px 0 0; /* Margem superior para espaçar do selo */
-}
-
-/* Estilos do Modal */
 .modal {
-    display: none; /* Esconde o modal por padrão */
-    position: fixed; /* Fica fixo na tela */
-    z-index: 1000; /* Fica acima de outros elementos */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Largura total */
-    height: 100%; /* Altura total */
-    overflow: auto; /* Permite rolagem se necessário */
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com opacidade */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-content {
     margin: auto;
-    display: block; /* Exibe o conteúdo */
-    max-width: 90%; /* Limita a largura máxima da imagem */
-    max-height: 80%; /* Limita a altura máxima da imagem */
-}
-
-#caption {
-    margin: auto;
-    text-align: center; /* Centraliza a legenda */
-    color: white; /* Cor do texto da legenda */
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
 }
 
 .close {
-    position: absolute; /* Posiciona o botão de fechar */
-    top: 15px;
-    right: 25px;
-    color: white; /* Cor do botão de fechar */
-    font-size: 35px; /* Tamanho do botão de fechar */
-    font-weight: bold; /* Negrito */
-    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
-    color: #bbb; /* Cor ao passar o mouse */
-    text-decoration: none; /* Remove sublinhado */
-    cursor: pointer; /* Cursor de mão */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
 
-/* Ajustes para telas pequenas */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
-    .selos-container {
-        flex-direction: row; /* Mantém os selos em linha */
-    }
-}
-
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Ajustes para telas grandes */
-@media (min-width: 768px) {
-    #institucional {
-        padding: 30px;
-        text-align: center;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        background-color: #fefefe;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        margin: 20px auto;
-        max-width: 800px;
+    header {
+        flex-direction: column; /* Muda a direção para coluna */
+        align-items: center; /* Centraliza os itens */
+        text-align: center; /* Centraliza o texto */
     }
 
-    #institucional h2 {
-        font-size: 28px;
+    .menu {
+        flex-direction: column; /* Muda a direção do menu para coluna */
+        margin-top: 10px; /* Espaço entre logo e menu */
     }
 
-    #institucional p {
-        font-size: 18px;
-    }
-
-    #produtos {
-        padding: 20px;
-        background-color: #f9f9f9;
-    }
-
-    .produtos-container {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .produto {
-        margin: 10px;
-        width: 200px;
-        text-align: center;
-    }
-
-    .carrossel-container {
-        flex-direction: row; /* Para telas grandes, mantém as imagens em linha */
-    }
-
-    .selos-container {
-        justify-content: space-around; /* Distribui os selos uniformemente */
-    }
-}
-
-/* Ajustes para telas pequenas */
-@media (max-width: 768px) {
-    nav {
-        padding: 10px;
-    }
-
+    .links,
     .social-icons {
-        justify-content: center;
-        margin-top: 5px;
+        margin-right: 0; /* Remove margem à direita */
+        margin-bottom: 10px; /* Espaçamento entre links e ícones sociais */
     }
 
     .produtos-container {
@@ -321,24 +261,15 @@ footer {
     }
 
     .produto {
-        margin: 10px 0;
-        width: 90%;
+        width: 80%; /* Aumenta a largura dos produtos em telas pequenas */
     }
 
-    #contato {
-        padding: 20px;
-        margin: 10px;
+    .institucional-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    #institucional, #produtos {
-        padding: 15px;
-    }
-
-    .carrossel-container {
-        flex-direction: column; /* Para telas pequenas, empilha as imagens */
-    }
-
-    .selos-container {
-        flex-direction: row; /* Mantém os selos em linha */
+    .institucional-imagem {
+        margin-bottom: 20px;
     }
 }
