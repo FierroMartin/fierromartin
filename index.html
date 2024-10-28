@@ -64,7 +64,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Carrossel Adicionado -->
 <section class="carrossel">
-    <h2>Galeria de Imagens</h2>
+    <h2>A Magia do Fogo: Nossa Essência</h2>
+    <p>Não é só sobre a comida. O assador ouve o apelo da fogueira, o aspecto aconchegante do fogo. Para ele, a fogueira comovente e incessante, é uma renovação. É a experiência, a sensação de liberdade. A reunião em torno do fogo e a contemplação das chamas que geram o encantamento. E, de um assador para o outro, nossos produtos seguem o chamado do universo que gira ao redor do fogo, o elemento que escreve o destino e aproxima os seres humanos desde o começo dos tempos.</p>
     <div class="carrossel-container">
         <div><img src="https://raw.githubusercontent.com/FierroMartin/fierromartin/main/Carrossel/foto1.jpg" alt="Foto 1"></div>
         <div><img src="https://raw.githubusercontent.com/FierroMartin/fierromartin/main/Carrossel/foto2.jpg" alt="Foto 2"></div>
@@ -107,8 +108,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <section id="institucional">
-    <h2>A Magia do Fogo: Nossa Essência</h2>
-    <p>Não é só sobre a comida. O assador ouve o apelo da fogueira, o aspecto aconchegante do fogo. Para ele, a fogueira comovente e incessante, é uma renovação. É a experiência, a sensação de liberdade. A reunião em torno do fogo e a contemplação das chamas que geram o encantamento. E, de um assador para o outro, nossos produtos seguem o chamado do universo que gira ao redor do fogo, o elemento que escreve o destino e aproxima os seres humanos desde o começo dos tempos.</p>
+    <div class="institucional-container">
+        <div class="institucional-imagem">
+            <img src="https://raw.githubusercontent.com/FierroMartin/fierromartin/main/Imagens/IMG_0709.jpg" alt="Descrição da Imagem" />
+        </div>
+        <div class="institucional-texto">
+            <h2>Transforme Seu Espaço: Churrasqueiras de Alto Design e Resistência</h2>
+            <p>A Fierro Martin transforma o ato de assar em uma experiência que valoriza o design e a durabilidade. Nossas churrasqueiras, em aço Corten e chapa esmaltada, combinam resistência ao tempo com sofisticação moderna. Cada peça é projetada para se destacar no quintal e criar momentos memoráveis ao redor do fogo, unindo beleza e funcionalidade para elevar o seu espaço e sua experiência de lazer.</p>
+        </div>
+    </div>
 </section>
 
 <!-- Nova Seção Adicionada -->
@@ -182,6 +190,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
     $(document).ready(function(){
         function setupCarousel() {
+            // Configuração do carrossel de produtos
             if ($(window).width() < 768) {
                 $('.produtos-container').slick({
                     dots: true,
@@ -198,11 +207,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }
             }
 
+            // Configuração do carrossel de imagens
             $('.carrossel-container').slick({
                 dots: true,
                 infinite: true,
                 speed: 500,
-                slidesToShow: 3,
+                slidesToShow: 3, // Mostra 3 imagens
                 slidesToScroll: 1,
                 adaptiveHeight: true,
                 arrows: true,
