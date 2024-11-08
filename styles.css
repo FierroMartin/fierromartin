@@ -1,344 +1,473 @@
-/* Estilos gerais */
+/* Estilo básico e reset */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden; /* Evitar rolagem horizontal */
 }
 
+* {
+    box-sizing: border-box; /* Garantir que padding e border não causem overflow */
+}
+
+/* Estilo do header */
 header {
-    background: #333;
-    color: white;
-    padding: 10px; /* Diminui a altura do cabeçalho */
-}
-
-nav {
+    background-color: #231f20;
+    color: #fff;
+    padding: 1rem 2rem; /* Mantém o padding para melhor espaçamento */
     display: flex;
-    justify-content: space-between; /* Espaço entre logo e menu */
-    align-items: center; /* Alinha verticalmente */
+    align-items: center;
+    justify-content: space-between; /* Distribui espaço entre logo e menu */
+    width: 100%; /* Garante que o header não exceda a largura da tela */
 }
 
 .logo {
-    margin-bottom: 0; /* Remove o espaço abaixo do logo */
-    margin-top: -5px; /* Ajusta a margem superior para alinhar melhor */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o logo */
+    justify-content: center; /* Centraliza horizontalmente o logo */
 }
 
-.logo h1 {
-    color: white; /* Cor do texto */
-    font-family: 'Montserrat', sans-serif; /* Fonte do título */
-    font-size: 24px; /* Tamanho da fonte */
-    margin: 0; /* Remove margens */
+.logo img {
+    height: 50px; /* Ajusta a altura do logo */
 }
 
 .menu {
     display: flex;
-    flex-direction: column; /* Empilha os links */
-    align-items: flex-end; /* Alinha os itens à direita */
+    align-items: center;
+    justify-content: flex-end; /* Alinha o menu à direita */
+}
+
+/* Adicionando um contêiner para o texto e ícones sociais */
+.header-right {
+    display: flex;
+    flex-direction: column; /* Muda a direção para coluna */
+    align-items: center; /* Alinha verticalmente */
+}
+
+/* Nova classe para centralizar "Visite Nossa Loja" */
+.visite-loja {
+    text-align: center; /* Centraliza o texto */
+    margin: 10px 0; /* Espaçamento acima e abaixo do texto */
+    color: #fff; /* Define a cor do texto como branco, igual aos ícones */
+}
+
+.visite-loja a {
+    color: #fff; /* Define a cor do link como branco */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.visite-loja a:hover {
+    color: #ffcc00; /* Cor ao passar o mouse, se desejar */
+}
+
+/* Estilo dos ícones sociais */
+.social-icons a {
+    color: #fff; /* Define a cor dos ícones como branca */
+    font-size: 24px; /* Ajusta o tamanho dos ícones */
+    text-decoration: none; /* Remove o sublinhado */
+    margin-left: 15px; /* Espaçamento entre os ícones */
+    transition: color 0.3s; /* Transição suave para hover */
+}
+
+.social-icons a:hover {
+    color: #ffcc00; /* Cor ao passar o mouse sobre os ícones */
 }
 
 .links {
-    margin-bottom: 5px; /* Espaçamento entre o link e os ícones sociais */
+    margin: 10px 0; /* Espaçamento entre os links e os ícones sociais */
 }
 
-.menu a {
-    color: white; /* Cor dos links do menu */
+.links a {
+    color: #fff; /* Cor dos links */
     text-decoration: none; /* Remove o sublinhado */
-    margin: 0; /* Remove margens */
-    text-align: right; /* Alinha o texto à direita */
-    font-size: 18px; /* Tamanho do texto aumentado para 18px */
+    margin-right: 15px; /* Espaçamento entre os links */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: color 0.3s; /* Transição suave para hover */
 }
 
-.social-icons {
-    display: flex;
-    margin-top: 5px; /* Espaçamento entre o link e os ícones */
+.links a:hover {
+    color: #ffcc00; /* Cor ao passar o mouse */
 }
 
-.social-icons a {
-    color: white; /* Cor dos ícones sociais */
-    font-size: 20px; /* Tamanho dos ícones */
-    margin: 0 10px; /* Aumenta o espaçamento entre os ícones */
-}
-
+/* Adicione o estilo do vídeo em destaque */
 .highlight {
     position: relative;
-    height: 70vh; /* Aumenta a altura do vídeo para 70% da tela */
     overflow: hidden;
-    margin: 0; /* Remove margens que podem estar causando espaço extra */
+    height: 75vh; /* Define a altura do vídeo como 75% da altura da tela */
 }
 
 .video-container {
-    height: 100%; /* Garante que o contêiner ocupe 100% da altura do pai */
+    width: 100%; /* Garante que o contêiner do vídeo ocupe toda a largura */
+    height: 100%; /* Garante que o contêiner do vídeo ocupe toda a altura disponível */
 }
 
 .video-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block; /* Remove espaço em branco abaixo do vídeo */
+    width: 100%; /* Garante que o vídeo não exceda a largura do contêiner */
+    height: 100%; /* Define a altura do vídeo para preencher o contêiner */
+    object-fit: cover; /* Garante que o vídeo cubra todo o contêiner sem distorção */
 }
 
-.banner {
-    padding: 20px 0; /* Adiciona espaçamento ao banner */
-    text-align: center; /* Centraliza o banner */
+/* Estilo do banner */
+.banner img {
+    width: 100%; /* Garante que o banner não exceda a largura do contêiner */
+    height: auto; /* Mantém a proporção do banner */
 }
 
+/* Estilo do carrossel */
 .carrossel {
-    padding: 20px;
     text-align: center;
+    padding: 2rem 0;
+    position: relative; /* Para posicionar os botões de navegação */
+    overflow: hidden; /* Para evitar que conteúdos saiam da área do carrossel */
 }
 
 .carrossel-container {
+    margin: 0 auto; /* Centraliza o carrossel */
+    display: flex; /* Garante que o carrossel utilize flexbox */
+    transition: transform 0.5s ease; /* Adiciona uma transição suave ao mover o carrossel */
+}
+
+/* Ajuste para as imagens do carrossel */
+.carrossel-item {
+    flex: 0 0 100%; /* Faz cada imagem ocupar 100% em telas pequenas */
+    margin: 0; /* Remove a margem entre as imagens do carrossel */
+}
+
+/* Estilo dos botões de navegação */
+.prev, .next {
+    position: absolute;
+    top: 50%; /* Posiciona na vertical */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Coloca os botões acima do carrossel */
+    border-radius: 50%; /* Botões circulares */
+    transition: background-color 0.3s; /* Transição suave para o hover */
+}
+
+.prev {
+    left: 10px; /* Posição do botão anterior */
+}
+
+.next {
+    right: 10px; /* Posição do botão próximo */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo para a seção institucional */
+#institucional {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding: 2rem;
 }
 
-.carrossel-container img {
-    width: 100%; /* Ajusta a imagem para ocupar 100% da largura do contêiner */
-    height: auto;
-    border-radius: 8px; /* Adiciona bordas arredondadas */
+.institucional-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o contêiner */
+    width: 100%; /* Garante que o contêiner ocupe 100% da largura */
 }
 
-.whatsapp-section {
-    text-align: center; /* Centraliza o texto da seção do WhatsApp */
-    padding: 20px;
+.institucional-imagem img {
+    width: 100%; /* Garante que a imagem ocupe 100% da largura disponível */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 0 auto; /* Centraliza a imagem */
 }
 
-.whatsapp-section a {
-    color: #28a745; /* Cor do link do WhatsApp */
-    font-size: 18px; /* Tamanho do texto */
-    text-decoration: none; /* Remove o sublinhado */
+.institucional-texto {
+    flex: 1;
+    text-align: center; /* Centraliza o texto */
 }
 
+/* Estilos para a seção de produtos */
 #produtos {
-    padding: 20px;
-    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9; /* Adiciona um fundo leve para destacar a seção */
+    text-align: center; /* Centraliza o texto dentro da seção */
+}
+
+#produtos h2 { /* Alvo para o título "Produtos em Destaque" */
+    font-size: 2rem; /* Ajuste o tamanho do título se necessário */
+    margin-bottom: 1rem; /* Espaço abaixo do título */
+    color: #333; /* Defina a cor do título */
 }
 
 .produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Melhor espaçamento entre produtos */
+    max-width: 1200px; /* Limita a largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+.produto {
+    flex: 1 1 calc(30% - 2rem); /* Ajusta a largura do produto para 30% menos a margem */
+    margin: 1rem; /* Ajusta a margem entre os produtos */
+    text-align: center;
+    transition: transform 0.3s; /* Transição suave para o efeito de hover */
+}
+
+.produto:hover {
+    transform: scale(1.05); /* Aumenta o produto levemente ao passar o mouse */
+}
+
+.produto img {
+    width: 100%; /* Garantir que a imagem não exceda o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas nas imagens */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para dar profundidade */
+}
+
+/* Adicionando estilos para os textos dos produtos em destaque */
+#produtos .produto h3,
+#produtos .produto p {
+    color: black; /* Define a cor do texto como preto */
+    text-decoration: none; /* Remove o sublinhado do texto */
+}
+
+/* Se você quiser aplicar a mesma regra aos links, adicione: */
+#produtos .produto a {
+    color: black; /* Define a cor do link como preto */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Estilos para os selos */
+#selos {
+    padding: 2rem;
+    text-align: center;
+}
+
+.selos-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.produto {
-    margin: 20px; /* Aumenta a margem entre os produtos */
+.selo {
+    margin: 15px;
+    width: 80px; /* Tamanho dos selos */
+}
+
+/* Estilos do footer */
+footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    display: flex;
-    flex-direction: column; /* Coloca o texto abaixo da imagem */
-    align-items: center; /* Centraliza o texto */
-    width: 250px; /* Aumenta a largura dos produtos para 250px */
+    padding: 1rem;
 }
 
-.produto a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: black; /* Define a cor do texto como preto */
+footer .footer-info {
+    margin: 1rem 0;
 }
 
-.produto img {
-    width: 100%; /* Ajusta a imagem para ocupar 100% da largura do contêiner */
-    height: auto;
-}
-
-#institucional {
-    padding: 20px;
-    text-align: center; /* Centraliza o texto desta seção */
+.whatsapp-section {
+    text-align: center;
+    padding: 1rem;
 }
 
 #contato {
-    padding: 20px;
+    padding: 2rem;
     text-align: center;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    max-width: 600px;
-    margin: auto;
-}
-
-#contato h2 {
-    font-family: 'Montserrat', sans-serif;
 }
 
 #contato form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-#contato input, #contato textarea {
-    margin-bottom: 10px;
+#contato input,
+#contato textarea {
+    margin: 10px 0;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 80%;
+    max-width: 400px;
 }
 
 #contato button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
 }
 
-#selos {
-    padding: 20px;
-    text-align: center; /* Centraliza o texto da seção de selos */
+#contato button:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
 }
 
-.selos-container {
-    display: flex;
-    justify-content: center; /* Centraliza os selos */
-    flex-wrap: wrap; /* Permite que os selos quebrem para a próxima linha, se necessário */
-}
-
-.selo {
-    margin: 15px; /* Margem entre os selos */
-    text-align: center;
-    width: 80px; /* Largura fixa dos selos */
-}
-
-.selo p {
-    font-size: 14px; /* Tamanho da fonte para o texto abaixo do selo */
-    margin: 5px 0 0; /* Margem superior para espaçar do selo */
-}
-
-/* Estilos do Modal */
+/* Estilos do modal */
 .modal {
-    display: none; /* Esconde o modal por padrão */
-    position: fixed; /* Fica fixo na tela */
-    z-index: 1000; /* Fica acima de outros elementos */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Largura total */
-    height: 100%; /* Altura total */
-    overflow: auto; /* Permite rolagem se necessário */
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com opacidade */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-content {
     margin: auto;
-    display: block; /* Exibe o conteúdo */
-    max-width: 90%; /* Limita a largura máxima da imagem */
-    max-height: 80%; /* Limita a altura máxima da imagem */
-}
-
-#caption {
-    margin: auto;
-    text-align: center; /* Centraliza a legenda */
-    color: white; /* Cor do texto da legenda */
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
 }
 
 .close {
-    position: absolute; /* Posiciona o botão de fechar */
-    top: 15px;
-    right: 25px;
-    color: white; /* Cor do botão de fechar */
-    font-size: 35px; /* Tamanho do botão de fechar */
-    font-weight: bold; /* Negrito */
-    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
-    color: #bbb; /* Cor ao passar o mouse */
-    text-decoration: none; /* Remove sublinhado */
-    cursor: pointer; /* Cursor de mão */
-}
-
-/* Ajustes para telas pequenas */
+/* Responsividade */
 @media (max-width: 768px) {
-    .selos-container {
-        flex-direction: row; /* Mantém os selos em linha */
-    }
-}
-
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Ajustes para telas grandes */
-@media (min-width: 768px) {
-    #institucional {
-        padding: 30px;
-        text-align: center;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        background-color: #fefefe;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        margin: 20px auto;
-        max-width: 800px;
+    header {
+        flex-direction: column; /* Muda a direção para coluna */
+        align-items: center; /* Centraliza os itens */
+        text-align: center; /* Centraliza o texto */
+        padding: 0.5rem 1rem; /* Diminui o padding do cabeçalho */
     }
 
-    #institucional h2 {
-        font-size: 28px;
+    .logo {
+        justify-content: center; /* Centraliza o logo horizontalmente */
+        margin-bottom: 10px; /* Espaço abaixo do logo */
     }
 
-    #institucional p {
-        font-size: 18px;
+    .menu {
+        flex-direction: column; /* Muda a direção do menu para coluna */
+        margin-top: 10px; /* Espaço entre logo e menu */
     }
 
-    #produtos {
-        padding: 20px;
-        background-color: #f9f9f9;
+    .header-right {
+        margin-top: 10px; /* Espaço acima do contêiner de links e ícones sociais */
+        align-items: center; /* Centraliza verticalmente */
+    }
+
+    .visite-loja {
+        margin: 10px 0; /* Espaçamento acima e abaixo do texto */
+    }
+
+    .links {
+        margin: 10px 0; /* Espaçamento entre os links e os ícones sociais */
     }
 
     .produtos-container {
-        display: flex;
-        justify-content: space-around;
+        flex-direction: column; /* Muda a direção para coluna em telas pequenas */
+        align-items: center; /* Centraliza os itens */
+        padding: 1rem; /* Ajusta o padding para telas pequenas */
     }
 
     .produto {
-        margin: 10px;
-        width: 200px;
-        text-align: center;
+        width: 90%; /* Ajusta para 90% em telas pequenas */
+        margin: 0.5rem 0; /* Ajusta a margem para evitar overflow */
     }
 
-    .carrossel-container {
-        flex-direction: row; /* Para telas grandes, mantém as imagens em linha */
+    .institucional-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem; /* Ajusta o padding */
+        width: 100%; /* Garante que o contêiner ocupe 100% da largura */
     }
 
+    .institucional-imagem img {
+        width: 110%; /* Aumenta a imagem para 110% da largura da tela */
+        max-width: 100%; /* Limita a largura máxima da imagem para não ultrapassar a tela */
+        height: auto; /* Mantém a proporção da imagem */
+        margin: 0 auto; /* Centraliza a imagem */
+    }
+
+    /* Ajustes adicionais */
     .selos-container {
-        justify-content: space-around; /* Distribui os selos uniformemente */
+        flex-direction: row; /* Mantém os selos em linha */
+        overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    }
+
+    .selo {
+        width: 80px; /* Mantém o tamanho dos selos */
+        flex: 0 0 auto; /* Garante que os selos não encolham */
+    }
+
+    /* Estilo do carrossel em telas pequenas */
+    .carrossel-container {
+        flex-direction: row; /* Garante que as imagens sejam exibidas em linha */
+    }
+
+    .carrossel-item {
+        flex: 0 0 100%; /* Faz cada imagem ocupar 100% em telas pequenas */
     }
 }
 
-/* Ajustes para telas pequenas */
-@media (max-width: 768px) {
-    nav {
-        padding: 10px;
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Estilo do carrossel em telas médias */
+    .carrossel-item {
+        flex: 0 0 50%; /* Ajusta para 50% em telas médias */
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Estilo do cabeçalho em telas grandes */
+    header {
+        position: relative; /* Necessário para o posicionamento absoluto */
+        width: 100%; /* Garante que o header ocupe toda a largura da tela */
+        padding: 3rem 4rem; /* Aumenta o padding do header para mais altura (aumento de 2rem para 3rem) */
+        height: auto; /* Ajusta a altura conforme o conteúdo */
+        box-sizing: border-box; /* Inclui padding na largura total */
+        display: flex;
+        justify-content: space-between; /* Espaça o logo e a seção à direita */
+        align-items: center; /* Alinha verticalmente os itens */
+        overflow: hidden; /* Garante que nada saia fora da área do header */
+    }
+
+    .logo {
+        position: absolute; /* Logo posicionado de forma absoluta */
+        left: 0; /* Fixa o logo na extrema esquerda */
+        top: 50%; /* Centraliza verticalmente */
+        transform: translateY(-50%); /* Ajusta o alinhamento vertical */
+        margin: 0; /* Remove margens adicionais */
+    }
+
+    .header-right {
+        position: absolute; /* Torna o contêiner de "Visite Nossa Loja" e ícones sociais absoluto */
+        right: 10%; /* Move um pouco para a esquerda, ajustando a distância da borda direita */
+        top: 50%; /* Centraliza verticalmente no header */
+        transform: translateY(-50%); /* Centraliza verticalmente */
+        display: flex;
+        flex-direction: column; /* Organiza os itens em coluna */
+        align-items: flex-end; /* Alinha os itens à extrema direita */
+        margin-top: 10px; /* Espaço acima da seção */
+        padding-right: 2rem; /* Garante que os ícones sociais e "Visite Nossa Loja" fiquem dentro do header */
+        overflow: visible; /* Garante que o conteúdo não seja cortado */
+    }
+
+    .visite-loja {
+        margin: 0; /* Remove margem para melhor alinhamento */
+        text-align: right; /* Alinha o texto à direita */
+        font-size: 1.25rem; /* Aumenta o tamanho do texto */
     }
 
     .social-icons {
-        justify-content: center;
-        margin-top: 5px;
+        margin-top: 10px; /* Espaço entre "Visite Nossa Loja" e os ícones sociais */
+        text-align: right; /* Alinha os ícones sociais à direita */
     }
 
-    .produtos-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .produto {
-        margin: 10px 0;
-        width: 90%;
-    }
-
-    #contato {
-        padding: 20px;
-        margin: 10px;
-    }
-
-    #institucional, #produtos {
-        padding: 15px;
-    }
-
-    .carrossel-container {
-        flex-direction: column; /* Para telas pequenas, empilha as imagens */
-    }
-
-    .selos-container {
-        flex-direction: row; /* Mantém os selos em linha */
+    .social-icons a {
+        font-size: 28px; /* Tamanho maior para os ícones */
+        margin-left: 15px; /* Espaçamento entre os ícones */
     }
 }
